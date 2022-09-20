@@ -1,0 +1,234 @@
+{
+  "version": "21.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "FirstCdkStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "FirstCdkStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "FirstCdkStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "FirstCdkStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1fd3be0a5e6e0972bf8d0b524e12c5a641adfa410534aa49315d8f3e7fa718e0.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "FirstCdkStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "FirstCdkStack.assets"
+      ],
+      "metadata": {
+        "/FirstCdkStack/undefined-Customers-Table": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "undefinedCustomersTable12F3F28A"
+            }
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-Table/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersTable12F3F28A"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customer-Lambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomerLambdaServiceRoleC9CE0E08"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customer-Lambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomerLambdaBCCA7F68"
+          }
+        ],
+        "/FirstCdkStack/undefined-CustomerTablePermissions/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomerTablePermissions0BC30533"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPI460D8BBF"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPIDeploymentD09A5454be0b8daa89c96a2188eab77e0b6efbe8"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/DeploymentStage.dev/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPIDeploymentStagedev5D76A69C"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPIEndpoint221B5EA7"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/Default/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPIOPTIONS653E44E1"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/Default/customers/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPIcustomersA7973935"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/Default/customers/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPIcustomersOPTIONS91D93FB4"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/Default/customers/{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPIcustomersidC01D77D7"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/Default/customers/{id}/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPIcustomersidOPTIONSE9A29359"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/Default/customers/{id}/GET/ApiPermission.FirstCdkStackundefinedCustomersAPIE724434D.GET..customers.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPIcustomersidGETApiPermissionFirstCdkStackundefinedCustomersAPIE724434DGETcustomersidF0B9600F"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/Default/customers/{id}/GET/ApiPermission.Test.FirstCdkStackundefinedCustomersAPIE724434D.GET..customers.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPIcustomersidGETApiPermissionTestFirstCdkStackundefinedCustomersAPIE724434DGETcustomersidC6AADCC6"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/Default/customers/{id}/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPIcustomersidGET7DFD9E10"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/Default/customers/{id}/DELETE/ApiPermission.FirstCdkStackundefinedCustomersAPIE724434D.DELETE..customers.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPIcustomersidDELETEApiPermissionFirstCdkStackundefinedCustomersAPIE724434DDELETEcustomersid39D953EE"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/Default/customers/{id}/DELETE/ApiPermission.Test.FirstCdkStackundefinedCustomersAPIE724434D.DELETE..customers.{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPIcustomersidDELETEApiPermissionTestFirstCdkStackundefinedCustomersAPIE724434DDELETEcustomersid07A53D8C"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/Default/customers/{id}/DELETE/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPIcustomersidDELETE8B5732DE"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/Default/customers/GET/ApiPermission.FirstCdkStackundefinedCustomersAPIE724434D.GET..customers": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPIcustomersGETApiPermissionFirstCdkStackundefinedCustomersAPIE724434DGETcustomers42AED554"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/Default/customers/GET/ApiPermission.Test.FirstCdkStackundefinedCustomersAPIE724434D.GET..customers": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPIcustomersGETApiPermissionTestFirstCdkStackundefinedCustomersAPIE724434DGETcustomers72DB9900"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/Default/customers/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPIcustomersGET3C5D4F41"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/Default/customers/PUT/ApiPermission.FirstCdkStackundefinedCustomersAPIE724434D.PUT..customers": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPIcustomersPUTApiPermissionFirstCdkStackundefinedCustomersAPIE724434DPUTcustomersCF76F522"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/Default/customers/PUT/ApiPermission.Test.FirstCdkStackundefinedCustomersAPIE724434D.PUT..customers": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPIcustomersPUTApiPermissionTestFirstCdkStackundefinedCustomersAPIE724434DPUTcustomersDC99CB3B"
+          }
+        ],
+        "/FirstCdkStack/undefined-Customers-API/Default/customers/PUT/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "undefinedCustomersAPIcustomersPUTB44F93E8"
+          }
+        ],
+        "/FirstCdkStack/apiUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiUrl"
+          }
+        ],
+        "/FirstCdkStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/FirstCdkStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/FirstCdkStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/FirstCdkStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "FirstCdkStack"
+    }
+  }
+}
